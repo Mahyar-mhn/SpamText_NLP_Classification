@@ -11,7 +11,7 @@ df = pd.read_csv("SPAM text message 20170820 - Data.csv")
 # print(df.head())
 
 # set ham and spam into 0 and 1
-df["Category"].replace({1: "spam", 0: "ham"}, inplace=True)
+df["Category"].replace({"spam": 1, "ham": 0}, inplace=True)
 
 # gain insight from data
 data = {'Category': ['spam', 'ham'], 'number': [len(df.loc[df['Category'] == 1]), len(df.loc[df['Category'] == 0])]}
